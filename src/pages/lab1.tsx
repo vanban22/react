@@ -28,7 +28,6 @@ function lab1() {
                 <Content style={{ color: "orange", padding: 20 }}> content </Content>
             </Layout>
 
-
             <Form onFinish={onFinish}>
                 <Form.Item label="name" name="name">
                     <Input />
