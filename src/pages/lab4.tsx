@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Input, Form, Button, Checkbox, Select } from "antd";
 import axios from "axios"
 import toast from "react-hot-toast";
-interface Story {
+interface category {
     id: number,
     title: string,
     description: string,
@@ -18,7 +18,7 @@ export default function storyForm() {
     });
     const queryClient = useQueryClient();
     const { mutate, isPending, isSuccess } = useMutation({
-        mutationFn: async (values: Story) => {
+        mutationFn: async (values: category) => {
             await axios.post("http://localhost:3000/categories", values);
         },
         onSuccess: () => {
@@ -79,7 +79,7 @@ export default function storyForm() {
                         <Select
                             loading={isLoading}
                             placeholder="Chọn danh mục"
-                            options={categories?.map((item: Story) => ({
+                            options={categories?.map((item: category) => ({
                                 value: item.id,
                                 label: item.title
                             }))}
