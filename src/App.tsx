@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { Layout } from "antd";
 import { Form, Input, Button } from "antd";
-
+import StoryForm from "./pages/lab4";
 const { Header, Content, Footer } = Layout;
 function App() {
   //
@@ -50,10 +50,10 @@ function App() {
           <Header style={{ color: "white" }}>Header</Header>
 
           <Content style={{ padding: 20 }}> content</Content>
-          <Footer>Footer</Footer>
+          <StoryForm/>
         </Layout>
 
-        <Form onFinish={onFinish}>
+        {/* <Form onFinish={onFinish}>
           <Form.Item label="Username" name="username">
             <Input placeholder="username" />
           </Form.Item>
@@ -62,7 +62,7 @@ function App() {
               Submit
             </Button>
           </Form.Item>
-        </Form>
+        </Form> */}
 
       </div>
 

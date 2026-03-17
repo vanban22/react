@@ -1,4 +1,51 @@
 {
-  "products": [],
+  "stories": [
+    {
+      "title": "đa",
+      "author": "Nguyễn Văn D",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "title": "abc",
+      "description ": "aaaa",
+      "id": 1
+    },
+    {
+      "title": "bbbba",
+      "description ": "rby",
+      "id": 2
+    },
+    {
+      "title": ",ty",
+      "description ": "c,",
+      "id": 3
+    },
+    {
+      "title": "123",
+      "description ": "123",
+      "id": 4
+    },
+    {
+      "title": "aaaaaaaa",
+      "description ": "aaa",
+      "id": 5
+    },
+    {
+      "title": "abc",
+      "description ": "d",
+      "id": 6
+    },
+    {
+      "title": "ddd",
+      "id": 7
+    },
+    {
+      "title": "1234",
+      "description ": "c",
+      "id": 8
+    }
+  ],
   "users": []
 }
