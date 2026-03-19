@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { Layout } from "antd";
 import { Form, Input, Button } from "antd";
-import StoryForm from "./pages/lab4";
+import { StoryList } from "./pages/lab5";
 const { Header, Content, Footer } = Layout;
 function App() {
   //
@@ -48,21 +48,14 @@ function App() {
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
         <Layout>
           <Header style={{ color: "white" }}>Header</Header>
-
-          <Content style={{ padding: 20 }}> content</Content>
-          <StoryForm/>
+          <Content style={{ padding: 20 }}> 
+            <StoryList/>
+            
+          </Content>
+          
         </Layout>
 
-        {/* <Form onFinish={onFinish}>
-          <Form.Item label="Username" name="username">
-            <Input placeholder="username" />
-          </Form.Item>
-          <Form.Item>
-            <Button htmlType="submit" type="primary">
-              Submit
-            </Button>
-          </Form.Item>
-        </Form> */}
+       
 
       </div>
 

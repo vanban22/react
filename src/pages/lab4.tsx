@@ -89,11 +89,6 @@ export default function storyForm() {
                     <Button htmlType="submit" type="primary" loading={isPending}>Submit</Button>
                 </Form>
             </div>
-
-
         </div>
-
-
-
     )
 }
