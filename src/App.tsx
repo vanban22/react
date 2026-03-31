@@ -1,19 +1,30 @@
 import { Toaster } from "react-hot-toast";
+import Header from "./components/Header";
+import AuthButtons from "./components/Buttons";
+import ThemeToggle from "./components/Theme";
 import { Link } from "react-router-dom";
-import { Layout } from "antd";
-import { Form, Input, Button } from "antd";
-import { StoryList } from "./pages/lab5";
-const { Header, Content, Footer } = Layout;
-function App() {
-  //
-  const onFinish = (values: any) => {
-    console.log("onFinish");
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
-    console.log(values);
-  };
-   
+function App() {
+  const themeContext = useContext(ThemeContext);
+
+  if (!themeContext) return null;
+
+  const { themeMode } = themeContext;
+
   return (
-    <>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: themeMode === "light" ? "#ffffff" : "#141414",
+        color: themeMode === "light" ? "#000000" : "#ffffff",
+      }}
+    >
+      <Header />
+      <AuthButtons />
+      <ThemeToggle />
+
       <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="#" className="text-xl font-semibold">
@@ -43,24 +54,12 @@ function App() {
         </div>
       </nav>
 
-      {/* MAIN CONTENT */}
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
-        <Layout>
-          <Header style={{ color: "white" }}>Header</Header>
-          <Content style={{ padding: 20 }}> 
-            <StoryList/>
-            
-          </Content>
-          
-        </Layout>
-
-       
-
       </div>
 
       <Toaster />
-    </>
+    </div>
   );
 }
 
