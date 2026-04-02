@@ -5,6 +5,8 @@ import ThemeToggle from "./components/Theme";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
+import { Navbar } from "./components/Navbar";
+import Register from "./pages/Register";
 
 function App() {
   const themeContext = useContext(ThemeContext);
@@ -14,18 +16,11 @@ function App() {
   const { themeMode } = themeContext;
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: themeMode === "light" ? "#ffffff" : "#141414",
-        color: themeMode === "light" ? "#000000" : "#ffffff",
-      }}
-    >
-      <Header />
-      <AuthButtons />
-      <ThemeToggle />
-
-      <nav className="bg-blue-600 text-white shadow">
+    <div >
+      
+      <Navbar/>
+      <Register/>
+      {/* <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="#" className="text-xl font-semibold">
             <strong>WEB2091 App</strong>
@@ -52,7 +47,7 @@ function App() {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       <div className="max-w-6xl mx-auto mt-10 px-4 text-center">
         <h1 className="text-4xl font-bold mb-4">Chào mừng đến với WEB2091</h1>
