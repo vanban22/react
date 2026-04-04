@@ -7,6 +7,8 @@ import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { Navbar } from "./components/Navbar";
 import Register from "./pages/Register";
+import UseUpdateList from "./hooks/useUpdateList";
+import StoryList from "./hooks/useCRUDList";
 
 function App() {
   const themeContext = useContext(ThemeContext);
@@ -19,7 +21,9 @@ function App() {
     <div >
       
       <Navbar/>
-      <Register/>
+     
+      <UseUpdateList/>
+      <StoryList/>
       {/* <nav className="bg-blue-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="#" className="text-xl font-semibold">
